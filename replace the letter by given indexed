@@ -1,0 +1,50 @@
+//replace the letter by given indexed
+input:
+classroom
+2
+6
+4
+output:
+classlasslasslassroom
+
+#include <stdio.h>
+#include<string.h>
+int main(void) {
+	// your code goes here
+	char m[20], mid[20], last[20];
+	int start,end,c,i,k,p;
+	scanf("\n%[^\n]",m);
+	
+	scanf("%d",&start);
+	scanf("%d",&end);
+	scanf("%d",&c);
+	
+	for(i=start-1, k=0; i<end-1;i++, k++)
+	{
+	    mid[k]=m[i];
+	}
+	
+	mid[k]='\0';
+//	printf("%s\n", mid);
+	
+	for(i=end-1, k=0; i<strlen(m);i++, k++)
+	{
+	    last[k]=m[i];
+	}
+	
+	last[k]='\0';
+//	printf("%s\n", last);
+	
+	m[start-1]='\0';
+//	printf("%s\n", m);
+	
+	char cp[20];
+	strcpy(cp,mid);
+	for(p=0; p<c-1; p++)
+	{
+	    strcat(mid,cp);
+	}
+	strcat(strcat(m,mid),last);
+	printf("%s\n", m);
+	return 0;
+}
