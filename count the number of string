@@ -30,3 +30,38 @@ hfhgf6564hfvjh
 4
 hbjnbmn35435
 5
+
+
+
+
+or
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    char s[1000];
+    int c=0,i;
+    int t;
+    scanf("%d",&t);
+    while(t>0)
+    {
+    	getchar();
+    	scanf("%[^\n]",s);
+    	c=0;
+    	for(i=0;s[i]!='\0';i++)
+    	{
+    		if(s[i]>='0'&& s[i]<='9')
+    		{
+    			c++;
+			}
+		}
+		printf("%d\n",c);
+		t--;
+	}
+	return 0;
+}
+
