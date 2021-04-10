@@ -1,0 +1,82 @@
+// string reverse
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char s[1000];
+	int i;
+	scanf("%[^\n]",s);
+	printf("%s\n",s);
+	for(i=strlen(s)-1;i>=0;i--)
+		printf("%c",s[i]);
+		
+	
+	return 0;
+}
+
+output:
+i love coding
+i love coding
+gnidoc evol i
+
+
+
+or
+
+
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char s[1000];
+	int i,j,t;
+	scanf("%[^\n]",s);
+	printf("%s\n",s);
+	for(i=0,j=strlen(s)-1;i<strlen(s)/2;i++,j--)
+	{
+		t=s[i];
+		s[i]=s[j];
+		s[j]=t;
+	}
+	printf("\n%s\n",s);
+	return 0;
+}
+
+or
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	int n,i=0,j,x,z;
+	char s[1000]="";
+	char t[1000];
+	scanf("%d",&n);
+	for(x=0;x<n;x++)
+	{
+		scanf("\n%[^\n]",t);
+		for(i=strlen(s),j=0;i<=strlen(t)+strlen(s);i++,j++)
+		{
+			s[i]=t[j];
+		}
+	}
+	s[i]='\0';
+	for(i=0,j=strlen(s)-1;i<strlen(s)/2;i++,j--)
+	{
+		z=s[i];
+		s[i]=s[j];
+		s[j]=z;
+	}
+	printf("\n%s\t",s);
+	return 0;
+}
+
+output:
+2
+DIDI I LOVE U
+PUJA
+
+AJUPU EVOL I IDID
