@@ -1,0 +1,38 @@
+//count the number of vowel and cons.
+#include<stdio.h>
+int main(void)
+{
+
+	char st[100];
+	int c=0,k=0,i;
+	//scanf("%s",st); // no need to use & while taking values using scanf
+	scanf("%[^\n]",st); //**/
+	//printf("%s",st);
+	
+	for(i=0;st[i]!='\0';i++)
+	{
+		//printf("%c\n",st[i]);
+		if((st[i] >= 65 && st[i] <= 90)|| (st[i]>=97 && st[i]<=122))
+		{
+			if(st[i]== 'a' || st[i]=='e' || st[i]=='i' || st[i]=='o' || st[i]=='u' || st[i]=='A' ||st[i]=='E' || st[i]=='I' 
+			|| st[i]=='O'|| st[i]=='U')
+			{
+				c++;
+			}
+			else
+			{
+				k++;
+			}
+		}
+	}
+	printf("\nvowel=%d\n",c);
+	printf("cons=%d\n",k);
+	return 0;
+}
+
+
+output:
+i love coding
+
+vowel=5
+cons=6
