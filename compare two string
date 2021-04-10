@@ -1,0 +1,32 @@
+// COMPARE two string using string library. 
+#include<string.h>  
+int main()  
+{  
+   char s[20];  
+   char t[20];  
+   int i;   
+   scanf("\n%[^\n]",s);
+   scanf("\n%[^\n]",t);  
+   i=stricmp(s,t);  
+   if(i==0)  
+   printf("True");  
+   else  
+   printf("Flase");  
+   return 0;  
+} 
+ 
+input:
+Case
+CASE
+Output:
+True
+
+input:
+coding
+code
+output:
+Flase
+
+
+
+// COMPARE two string without using string library. 
