@@ -1,0 +1,67 @@
+//convert captital to small format and vice versa
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char s[1000];
+	int i;
+	scanf("%[^\n]",s);
+	printf("%s\n",s);
+	
+	for(i=0;i<=strlen(s)-1;i++)
+	{
+		if(s[i]>='A'&& s[i]<='Z')
+		{
+			printf("%c",s[i]+32);
+		}
+		else if(s[i]>='a' && s[i]<='z')
+		{
+			printf("%c",s[i]-32);
+		}
+		else
+		{
+			printf("%c",s[i]);
+		}
+	}
+	return 0;
+}
+
+
+output:
+	
+i love u didi
+i love u didi
+I LOVE U DIDI
+
+
+
+
+
+or
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char s[1000];
+	int i;
+	scanf("%[^\n]",s);
+	printf("%s\n",s);
+	
+	for(i=0;i<=strlen(s)-1;i++)
+	{
+		if(s[i]>='A'&& s[i]<='Z')
+		{
+			s[i]+=32;
+		}
+		else if(s[i]>='a' && s[i]<='z')
+		{
+			s[i]-=32;
+		}
+	}
+	printf("\n%s\n",s);
+	return 0;
+}
