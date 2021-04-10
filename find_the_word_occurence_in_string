@@ -1,0 +1,63 @@
+input:
+i love coding code coding coding
+coding
+
+output:
+0 i love
+1  love
+2 love c
+3 ove co
+4 ve cod
+5 e codi
+6  codin
+7 coding
+8 oding
+9 ding c
+10 ing co
+11 ng cod
+12 g code
+13  code
+14 code c
+15 ode co
+16 de cod
+17 e codi
+18  codin
+19 coding
+20 oding
+21 ding c
+22 ing co
+23 ng cod
+24 g codi
+25  codin
+26 coding
+3
+
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char m[1000];
+	char s[1000];
+	char t[1000];
+	int i,count=0,k,j;
+	scanf("\n%[^\n]",m);
+	getchar();
+	scanf("\n%[^\n]",s);
+	
+	for(i=0;i<=strlen(m)-strlen(s);i++)
+	{
+		for(k=0,j=i;k<strlen(s);k++,j++)
+		{
+			t[k]=m[j];
+		}
+		t[k]='\0';
+		printf("%d %s\n",i,t);
+		
+		if(strcmp(s,t)==0)
+		{
+			count++;
+		}
+	}
+	printf("%d",count);
+	return 0;
+}
