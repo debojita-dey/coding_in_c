@@ -1,0 +1,32 @@
+// count the number of digit from the string
+#include <stdio.h>
+int main(void) {
+	int i,t,count;
+	char str[100];
+	scanf("%d",&t);
+	while(t>0)
+	{
+	    getchar();
+	    scanf("%[^\n]",str);
+	    count=0;
+	    for(i=0;str[i]!='\0';i++)
+	    {
+	        if(str[i]>=48 && str[i]<=57)
+	        {
+	            count++;
+	        }
+	    }
+	    printf("%d\n",count);
+	    t--;
+	}
+	return 0;
+}
+
+
+
+output:
+2
+hfhgf6564hfvjh
+4
+hbjnbmn35435
+5
