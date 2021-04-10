@@ -30,3 +30,42 @@ Flase
 
 
 // COMPARE two string without using string library. 
+
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char s[1000];
+	char a[1000];
+	scanf("\n%[^\n]",s);
+	getchar();
+	scanf("\n%[^\n]",a);
+	int x,y;
+	x=strlen(s);
+	y=strlen(a);
+	int flag=1,k;
+	if(x!=y)
+	{
+		printf("false");
+	}
+	else
+	{
+		for(k=0;k<x;k++)
+		{
+			if((s[k]!=a[k]) && (s[k]!=a[k]+32) && (s[k]+32!=a[k]))
+			{
+				flag=0;
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			printf("false");
+		}
+		else
+		{
+			printf("True");
+		}
+	}
+	return 0;
+}
