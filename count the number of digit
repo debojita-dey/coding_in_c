@@ -65,3 +65,44 @@ int main()
 	return 0;
 }
 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//count the number of letter
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char s[1000];
+	int x,i,t,count;
+	scanf("%d",&t);
+	while(t>0){
+	getchar();
+	scanf("%[^\n]",s);
+	count=0;
+	for(i=0;s[i]!='\0';i++){
+	
+	if(s[i]>='a' && s[i]<='z') {
+	
+		count++;
+	}
+	else if(s[i]>='A' && s[i]<='Z')
+   {
+	
+		count++;
+	}
+   }
+	printf("%d\n",count);
+    t--;
+    }
+	return 0;
+	}
+
+
+
+output:
+2
+PuJa
+4
+HJVFHJVfhjgvjh4545@@@HFVHhfvh
+22
+
